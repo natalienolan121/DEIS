@@ -15,8 +15,8 @@ def create_text_image(data_column, output_file_name, title):
     all_text = "\n".join([entry.strip() for entry in data_column.dropna() if entry.strip()])
 
     # Define image properties
-    image_width = 800
-    image_height = 1000
+    image_width = 2500
+    image_height = 1500
     background_color = "white"
     text_color = "black"
 
@@ -88,6 +88,12 @@ plot(fig, filename=output_file, auto_open=False)
 numeracy_column = "What are the main barriers preventing students from improving their numeracy skills?"
 create_text_image(df[numeracy_column], "numeracy_barriers_text.png", "Numeracy Barriers")
 
+numeracyideas_column = "What initiatives or actions could help reduce numeracy anxiety among students?"
+create_text_image(df[numeracyideas_column], "numeracy_ideas_text.png", "Numeracy Ideas")
+
+numeracyideas2_column = "Do you have any additional feedback or suggestions for improving numeracy in our school?"
+create_text_image(df[numeracyideas2_column], "numeracy_ideas2_text.png", "Numeracy Ideas2")
+
 
 
 
@@ -130,6 +136,14 @@ plot(fig, filename=output_file, auto_open=False)
 
 literacy_column = "What are the main barriers preventing students from improving their literacy skills?"
 create_text_image(df[literacy_column], "literacy_barriers_text.png", "Literacy Barriers")
+
+literacyideas_column = "What initiatives could help further improve literacy among students with EAL needs?"
+create_text_image(df[literacyideas_column], "literacy_ideas_text.png", "Literacy Ideas")
+
+literacyideas2_column = "What initiatives could help further improve literacy among students with EAL needs?"
+create_text_image(df[literacyideas2_column], "literacy_ideas2_text.png", "Literacy Ideas")
+
+
 
 
 
@@ -175,5 +189,13 @@ plot(fig, filename=output_file, auto_open=False)
 
 attendance_column = "What barriers do you feel are preventing students from improving their attendance?"
 create_text_image(df[attendance_column], "attendance_barriers_text.png", "Attendance Barriers")
+
+attendance_ideas="How can we better support teachers in monitoring and improving student attendance?"
+create_text_image(df[attendance_ideas], "attendance_ideas_text.png", "Attendance Ideas")
+
+attendance_ideas2="Is there any Ideas that you have in or out of the classroom that could help improve attendance "
+create_text_image(df[attendance_ideas2], "attendance_ideas2_text.png", "Attendance Ideas")
+
+
 
 
